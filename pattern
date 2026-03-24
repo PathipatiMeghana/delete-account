@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Account - Antibiotic Resistance Pattern Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        header {
+            background: #c0392b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #e74c3c;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c0392b;
+        }
+
+        .warning {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Delete Account</h1>
+    <p>Antibiotic Resistance Pattern Analysis</p>
+</header>
+
+<div class="container">
+    <h2>Confirm Account Deletion</h2>
+
+    <p>Enter your email and password to delete your account permanently.</p>
+
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <input type="password" id="password" placeholder="Enter your password" required>
+
+    <button onclick="deleteAccount()">Delete My Account</button>
+
+    <p class="warning">
+        ⚠ This action is irreversible. All your data will be permanently deleted.
+    </p>
+
+    <p id="message"></p>
+</div>
+
+<script>
+    function deleteAccount() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        if (email === "" || password === "") {
+            document.getElementById("message").innerHTML =
+                "<span class='warning'>Please fill all fields</span>";
+            return;
+        }
+
+        // Dummy logic (frontend only)
+        document.getElementById("message").innerHTML =
+            "<span class='success'>Account deleted successfully (Demo)</span>";
+
+        // 🔴 For real app:
+        // connect API here (Django/Flask backend)
+    }
+</script>
+
+</body>
+</html>
